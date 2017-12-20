@@ -34,8 +34,15 @@ Flower.prototype = {
       + this.petals
       + " pristine petals";
     document.querySelector("body").appendChild(flower);
+  },
+///return(flower2.color + "-" + this.color)
+  crossPollination: function crossPollination(flower2) {
+    return(flower2.petals + this.petals);
   }
 }
+
+// eturn("Color is " + flower2.color + "-" + this.color + " and number of petals is " flower2.petals + this.petals);
+
 
 //initialize some flower instances
 var chrysanthemum = new Flower("pink", 65, false);
@@ -44,3 +51,5 @@ var lily = new Flower("yellow", 6, true);
 var jasmine = new Flower("white", 5, true);
 var mountainLaurel = new Flower("purple", 50, true);
 var rose = new Flower("red", 7, true);
+
+rose.crossPollination(mountainLaurel);
